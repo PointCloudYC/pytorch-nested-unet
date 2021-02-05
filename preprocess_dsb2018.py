@@ -18,6 +18,9 @@ def main():
         path = paths[i]
         img = cv2.imread(os.path.join(path, 'images',
                          os.path.basename(path) + '.png'))
+        # handle bug "AttributeError: 'NoneType' object has no attribute 'shape'"
+        if img is None:
+            continue
         mask = np.zeros((img.shape[0], img.shape[1]))
         for mask_path in glob(os.path.join(path, 'masks', '*')):
             mask_ = cv2.imread(mask_path, cv2.IMREAD_GRAYSCALE) > 127
