@@ -58,3 +58,7 @@ time python val.py --name dsb2018_96_NestedUNet_woDS
   - pbar.update(1)
   - pabar.close()
 
+
+
+# exploit
+## apply unet++ structure to RandLA-Net model?
