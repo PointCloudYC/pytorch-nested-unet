@@ -38,8 +38,8 @@ echo "start training..."
 
 # we execute the job and time it
 # time python preprocess_dsb2018.py
-time python train.py --dataset dsb2018_96 --arch NestedUNet
+time python train.py --dataset dsb2018_96 --arch NestedUNet --loss 'LabelSmoothingLoss'
 time python val.py --name dsb2018_96_NestedUNet_woDS
-# time python train.py
+# time python train.py --loss 'LabelSmoothingLoss'
 echo "finish training"
 
