@@ -33,7 +33,7 @@ time python val.py --name dsb2018_96_NestedUNet_woDS
 - archs.py; elegant code implementation.
   - VGGBlock, 2 consecutive conv w. BN.
   - UNet, a symmetrical network, composed of conv, upsampling, concat and 1x1 conv operations.
-  - NestedUNet, Unet improved version w. dense connection and deep supervision; (**basic logic is implement Unet+L{1,2,3,4}, then conduct dense connections for each final output**)
+  - NestedUNet, Unet improved version w. dense connection and deep supervision compared w. unet; (**basic logic is implement Unet+L{1,2,3,4}, then conduct dense connections for each final output**)
 
 - losses, metrics.py
 - dataset.py and preprocess_dsb2018.py

@@ -134,3 +134,12 @@ class NestedUNet(nn.Module):
         else:
             output = self.final(x0_4)
             return output
+
+def main():
+    x=torch.rand(1,3,224,224)
+    nest_unet=NestedUNet(num_classes=3,input_channels=3,deep_supervision=True)
+    pred=nest_unet(x)
+    print(pred[0].shape)
+
+if __name__ == "__main__":
+    main()
